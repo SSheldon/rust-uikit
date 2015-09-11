@@ -1,0 +1,11 @@
+[package]
+name = "uikit-example"
+version = "0.0.0"
+authors = ["Steven Sheldon"]
+
+[lib]
+name = "uikit_example"
+crate-type = ["staticlib"]
+
+[dependencies.objc-uikit]
+path = "../.."

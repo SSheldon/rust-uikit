@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		134BB5D01BA38F5B004952BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 134BB5CF1BA38F5B004952BF /* main.m */; };
+		134BB5EB1BA3953D004952BF /* libuikit_example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 134BB5E91BA3953D004952BF /* libuikit_example.a */; settings = {ASSET_TAGS = (); }; };
+		134BB5ED1BA395EC004952BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134BB5EC1BA395EC004952BF /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		134BB5CB1BA38F5B004952BF /* RustUIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustUIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		134BB5CF1BA38F5B004952BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		134BB5DF1BA38F5B004952BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		134BB5E91BA3953D004952BF /* libuikit_example.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuikit_example.a; path = rust/libuikit_example.a; sourceTree = "<group>"; };
+		134BB5EA1BA3953D004952BF /* uikit_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uikit_example.h; path = rust/uikit_example.h; sourceTree = "<group>"; };
+		134BB5EC1BA395EC004952BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +26,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134BB5ED1BA395EC004952BF /* UIKit.framework in Frameworks */,
+				134BB5EB1BA3953D004952BF /* libuikit_example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,6 +37,8 @@
 		134BB5C21BA38F5B004952BF = {
 			isa = PBXGroup;
 			children = (
+				134BB5EC1BA395EC004952BF /* UIKit.framework */,
+				134BB5E81BA39521004952BF /* rust */,
 				134BB5CD1BA38F5B004952BF /* RustUIKitExample */,
 				134BB5CC1BA38F5B004952BF /* Products */,
 			);
@@ -50,6 +59,15 @@
 				134BB5CF1BA38F5B004952BF /* main.m */,
 			);
 			path = RustUIKitExample;
+			sourceTree = "<group>";
+		};
+		134BB5E81BA39521004952BF /* rust */ = {
+			isa = PBXGroup;
+			children = (
+				134BB5EA1BA3953D004952BF /* uikit_example.h */,
+				134BB5E91BA3953D004952BF /* libuikit_example.a */,
+			);
+			name = rust;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +232,10 @@
 				INFOPLIST_FILE = RustUIKitExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rust",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sasheldon.RustUIKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -225,6 +247,10 @@
 				INFOPLIST_FILE = RustUIKitExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rust",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sasheldon.RustUIKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
