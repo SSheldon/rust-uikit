@@ -7,9 +7,6 @@ authors = ["Steven Sheldon"]
 name = "uikit_example"
 crate-type = ["staticlib"]
 
-[dependencies]
-objc-foundation = "0.0"
-
 [dependencies.objc-uikit]
 path = "../.."
 
