@@ -10,3 +10,7 @@
 }
 
 @end
+
+Class RustApplicationDelegateClass() {
+  return [RustApplicationDelegate class];
+}
