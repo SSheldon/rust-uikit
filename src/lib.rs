@@ -6,7 +6,7 @@ extern crate objc_id;
 extern crate objc_foundation;
 
 use libc::{c_char, c_int};
-use objc_foundation::NSString;
+use objc_foundation::{INSObject, NSString};
 
 #[link(name = "UIKit", kind = "framework")]
 extern {
@@ -14,3 +14,5 @@ extern {
             principalClassName: *mut NSString,
             delegateClassName: *mut NSString) -> c_int;
 }
+
+pub trait IUIApplicationDelegate : INSObject { }

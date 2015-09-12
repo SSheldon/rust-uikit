@@ -1,9 +1,11 @@
 extern crate objc;
 extern crate objc_foundation;
+extern crate objc_uikit;
 
 use objc::Message;
 use objc::runtime::Class;
 use objc_foundation::INSObject;
+use objc_uikit::IUIApplicationDelegate;
 
 extern {
     fn RustApplicationDelegateClass() -> *mut Class;
@@ -24,3 +26,5 @@ impl INSObject for ApplicationDelegate {
         }
     }
 }
+
+impl IUIApplicationDelegate for ApplicationDelegate { }
