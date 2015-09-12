@@ -1,0 +1,9 @@
+[package]
+name = "objc-uikit-impl"
+version = "0.0.0"
+authors = ["Steven Sheldon"]
+
+build = "build.rs"
+
+[build-dependencies]
+gcc = "0.3"
