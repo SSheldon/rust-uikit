@@ -1,7 +1,7 @@
-extern crate objc_uikit;
-extern crate objc_uikit_impl;
+extern crate uikit;
+extern crate uikit_impl;
 
-use objc_uikit_impl::{application_main, ApplicationDelegate};
+use uikit_impl::{application_main, ApplicationDelegate};
 
 struct ExampleAppDelegate;
 

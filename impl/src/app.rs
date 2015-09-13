@@ -3,7 +3,7 @@ use std::mem;
 use objc::Message;
 use objc::runtime::{BOOL, NO, YES, Class};
 use objc_foundation::INSObject;
-use objc_uikit::{IUIApplicationDelegate, self};
+use uikit::{IUIApplicationDelegate, self};
 
 pub trait ApplicationDelegate {
     fn did_finish_launching(&self) -> bool;
@@ -39,7 +39,7 @@ pub fn application_main<T: ApplicationDelegate>(delegate: T) -> ! {
         APP_DELEGATE_PTR = Some(mem::transmute(delegate));
     }
 
-    objc_uikit::application_main::<ApplicationDelegateObj>();
+    uikit::application_main::<ApplicationDelegateObj>();
 }
 
 #[no_mangle]
