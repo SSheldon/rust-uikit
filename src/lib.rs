@@ -1,8 +1,4 @@
 extern crate libc;
-extern crate block;
-#[macro_use]
-extern crate objc;
-extern crate objc_id;
 extern crate objc_foundation;
 
 use std::env;
