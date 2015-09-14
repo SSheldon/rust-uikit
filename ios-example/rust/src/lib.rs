@@ -1,8 +1,10 @@
+extern crate core_graphics;
 extern crate objc_id;
 extern crate objc_foundation;
 extern crate uikit;
 extern crate uikit_impl;
 
+use core_graphics::geometry::{CGPoint, CGRect, CGSize};
 use objc_id::ShareId;
 use objc_foundation::INSObject;
 use uikit::*;
@@ -12,9 +14,20 @@ struct ExampleAppDelegate;
 
 impl ApplicationDelegate for ExampleAppDelegate {
     fn root_view_controller(&self) -> ShareId<UIViewController> {
-        let color = UIColor::from_rgba(0., 1., 0., 1.).share();
+        let green = UIColor::from_rgba(0., 1., 0., 1.).share();
+        let blue = UIColor::from_rgba(0., 0., 1., 1.).share();
+
         let root_vc = UIViewController::new().share();
-        root_vc.view().set_background_color(color);
+        root_vc.view().set_background_color(green);
+
+        let frame = CGRect {
+            origin: CGPoint { x: 100., y: 100. },
+            size: CGSize { width: 100., height: 100. },
+        };
+        let subview = UIView::with_frame(frame).share();
+        subview.set_background_color(blue);
+        root_vc.view().add_subview(subview);
+
         root_vc
     }
 
