@@ -2,10 +2,13 @@ use std::mem;
 
 use objc::Message;
 use objc::runtime::{BOOL, NO, YES, Class};
+use objc_id::ShareId;
 use objc_foundation::INSObject;
-use uikit::{IUIApplicationDelegate, self};
+use uikit::{IUIApplicationDelegate, UIViewController, self};
 
 pub trait ApplicationDelegate {
+    fn root_view_controller(&self) -> ShareId<UIViewController>;
+
     fn did_finish_launching(&self) -> bool;
 }
 
@@ -56,6 +59,14 @@ pub unsafe extern fn RustApplicationDelegateCreate(out: *mut *mut ApplicationDel
 pub unsafe extern fn RustApplicationDelegateDestroy(obj: *mut ApplicationDelegate) {
     let delegate: Box<ApplicationDelegate> = mem::transmute(obj);
     drop(delegate);
+}
+
+#[no_mangle]
+pub unsafe extern fn RustApplicationDelegateCreateRootViewController(obj: *mut ApplicationDelegate) -> *mut UIViewController {
+    let controller = (&*obj).root_view_controller();
+    let controller_ptr = &*controller as *const _ as *mut _;
+    mem::forget(controller);
+    controller_ptr
 }
 
 #[no_mangle]
