@@ -1,9 +1,5 @@
+#import "RustObject.h"
 #import <UIKit/UIKit.h>
-
-struct RustObjectPtr {
-    void *data;
-    void *vtable;
-};
 
 typedef struct RustObjectPtr RustApplicationDelegatePtr;
 
