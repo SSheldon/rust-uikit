@@ -3,7 +3,7 @@ use objc::runtime::Class;
 use objc_id::{Id, ShareId};
 use objc_foundation::INSObject;
 
-use UIView;
+use {NoSyncSend, UIView};
 
 pub trait IUIViewController : INSObject {
     fn view(&self) -> ShareId<UIView> {
@@ -16,7 +16,7 @@ pub trait IUIViewController : INSObject {
 }
 
 pub struct UIViewController {
-    _private: (),
+    _marker: NoSyncSend,
 }
 
 unsafe impl Message for UIViewController { }

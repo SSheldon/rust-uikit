@@ -4,7 +4,7 @@ use objc::runtime::Class;
 use objc_id::{Id, ShareId};
 use objc_foundation::INSObject;
 
-use UIColor;
+use {NoSyncSend, UIColor};
 
 pub trait IUIView : INSObject {
     fn with_frame(frame: CGRect) -> Id<Self> {
@@ -62,7 +62,7 @@ pub trait IUIView : INSObject {
 }
 
 pub struct UIView {
-    _private: (),
+    _marker: NoSyncSend,
 }
 
 unsafe impl Message for UIView { }

@@ -31,3 +31,7 @@ fn is_main_thread() -> bool {
     let result: BOOL = unsafe { msg_send![cls, isMainThread] };
     result != NO
 }
+
+struct NoSyncSend {
+    _marker: ::std::marker::PhantomData<*mut ::libc::c_void>,
+}
