@@ -5,6 +5,12 @@ extern crate objc;
 extern crate objc_id;
 extern crate objc_foundation;
 
+macro_rules! assert_main_thread {
+    () => (
+        assert!($crate::is_main_thread())
+    );
+}
+
 mod app;
 mod color;
 mod view;
@@ -17,3 +23,11 @@ pub use view_controller::{IUIViewController, UIViewController};
 
 #[link(name = "UIKit", kind = "framework")]
 extern { }
+
+fn is_main_thread() -> bool {
+    use objc::runtime::{Class, BOOL, NO};
+
+    let cls = Class::get("NSThread").unwrap();
+    let result: BOOL = unsafe { msg_send![cls, isMainThread] };
+    result != NO
+}
