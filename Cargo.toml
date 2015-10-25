@@ -1,7 +1,14 @@
 [package]
 name = "uikit"
-version = "0.0.0"
+version = "0.0.1"
 authors = ["Steven Sheldon"]
+
+description = "Rust wrapper for iOS's UIKit framework."
+keywords = ["objective-c", "ios", "uikit", "cocoa"]
+repository = "http://github.com/SSheldon/rust-uikit"
+license = "MIT"
+
+exclude = [".gitignore", "ios-example/**", "impl/**"]
 
 [dependencies]
 libc = "0.1"
