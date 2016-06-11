@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		134BB5D01BA38F5B004952BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 134BB5CF1BA38F5B004952BF /* main.m */; };
-		134BB5EB1BA3953D004952BF /* libuikit_example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 134BB5E91BA3953D004952BF /* libuikit_example.a */; settings = {ASSET_TAGS = (); }; };
+		134BB5EB1BA3953D004952BF /* libuikit_example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 134BB5E91BA3953D004952BF /* libuikit_example.a */; };
 		134BB5ED1BA395EC004952BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134BB5EC1BA395EC004952BF /* UIKit.framework */; };
+		1373D1AE1D0C979D008AF888 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1373D1AD1D0C979D008AF888 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		134BB5E91BA3953D004952BF /* libuikit_example.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuikit_example.a; path = rust/libuikit_example.a; sourceTree = "<group>"; };
 		134BB5EA1BA3953D004952BF /* uikit_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uikit_example.h; path = rust/uikit_example.h; sourceTree = "<group>"; };
 		134BB5EC1BA395EC004952BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1373D1AD1D0C979D008AF888 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1373D1AE1D0C979D008AF888 /* Security.framework in Frameworks */,
 				134BB5ED1BA395EC004952BF /* UIKit.framework in Frameworks */,
 				134BB5EB1BA3953D004952BF /* libuikit_example.a in Frameworks */,
 			);
@@ -37,6 +40,7 @@
 		134BB5C21BA38F5B004952BF = {
 			isa = PBXGroup;
 			children = (
+				1373D1AD1D0C979D008AF888 /* Security.framework */,
 				134BB5EC1BA395EC004952BF /* UIKit.framework */,
 				134BB5E81BA39521004952BF /* rust */,
 				134BB5CD1BA38F5B004952BF /* RustUIKitExample */,
