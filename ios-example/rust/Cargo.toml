@@ -8,9 +8,9 @@ name = "uikit_example"
 crate-type = ["staticlib"]
 
 [dependencies]
-core-graphics = "0.1"
-objc_id = "0.0"
-objc-foundation = "0.0"
+core-graphics = "=0.2.0"
+objc_id = "0.1"
+objc-foundation = "0.1"
 
 [dependencies.uikit]
 path = "../.."
