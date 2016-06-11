@@ -11,7 +11,6 @@ license = "MIT"
 exclude = [".gitignore", "ios-example/**", "impl/**"]
 
 [dependencies]
-libc = "0.1"
 core-graphics = "0.1"
 objc = "0.1"
 objc_id = "0.0"

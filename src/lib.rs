@@ -1,4 +1,3 @@
-extern crate libc;
 extern crate core_graphics;
 #[macro_use]
 extern crate objc;
@@ -33,5 +32,5 @@ fn is_main_thread() -> bool {
 }
 
 struct NoSyncSend {
-    _marker: ::std::marker::PhantomData<*mut ::libc::c_void>,
+    _marker: ::std::marker::PhantomData<*mut ::std::os::raw::c_void>,
 }

@@ -1,8 +1,8 @@
 use std::env;
 use std::ffi::CString;
+use std::os::raw::{c_char, c_int};
 use std::ptr;
 
-use libc::{c_char, c_int};
 use objc_foundation::{INSObject, INSString, NSString};
 
 #[link(name = "UIKit", kind = "framework")]
