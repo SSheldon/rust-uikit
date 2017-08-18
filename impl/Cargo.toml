@@ -14,4 +14,4 @@ objc-foundation = "0.1"
 path = ".."
 
 [build-dependencies]
-gcc = "0.3"
+gcc = "0.3.52"

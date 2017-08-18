@@ -12,11 +12,15 @@ macro_rules! assert_main_thread {
 
 mod app;
 mod color;
+mod image;
+mod image_view;
 mod view;
 mod view_controller;
 
 pub use app::{application_main, IUIApplicationDelegate};
 pub use color::UIColor;
+pub use image::UIImage;
+pub use image_view::UIImageView;
 pub use view::{IUIView, UIView};
 pub use view_controller::{IUIViewController, UIViewController};
 
