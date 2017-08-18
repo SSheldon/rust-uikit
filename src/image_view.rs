@@ -6,7 +6,14 @@ use objc_foundation::INSObject;
 
 use {NoSyncSend, IUIView, UIImage};
 
-impl IUIView for UIImageView { }
+impl IUIView for UIImageView {
+    fn set_frame(&self, frame: CGRect) {
+        assert_main_thread!();
+        unsafe {
+            msg_send![self, setFrame:frame]
+        }
+    }
+}
 
 pub struct UIImageView {
     _marker: NoSyncSend,
