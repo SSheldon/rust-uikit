@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07680E111F464F8600DA79D7 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 07680E101F464F8600DA79D7 /* libresolv.tbd */; };
 		134BB5D01BA38F5B004952BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 134BB5CF1BA38F5B004952BF /* main.m */; };
 		134BB5EB1BA3953D004952BF /* libuikit_example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 134BB5E91BA3953D004952BF /* libuikit_example.a */; };
 		134BB5ED1BA395EC004952BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134BB5EC1BA395EC004952BF /* UIKit.framework */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07680E101F464F8600DA79D7 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		134BB5CB1BA38F5B004952BF /* RustUIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustUIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		134BB5CF1BA38F5B004952BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		134BB5DF1BA38F5B004952BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -28,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07680E111F464F8600DA79D7 /* libresolv.tbd in Frameworks */,
 				1373D1AE1D0C979D008AF888 /* Security.framework in Frameworks */,
 				134BB5ED1BA395EC004952BF /* UIKit.framework in Frameworks */,
 				134BB5EB1BA3953D004952BF /* libuikit_example.a in Frameworks */,
@@ -37,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07680E0F1F464F8600DA79D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07680E101F464F8600DA79D7 /* libresolv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		134BB5C21BA38F5B004952BF = {
 			isa = PBXGroup;
 			children = (
@@ -45,6 +56,7 @@
 				134BB5E81BA39521004952BF /* rust */,
 				134BB5CD1BA38F5B004952BF /* RustUIKitExample */,
 				134BB5CC1BA38F5B004952BF /* Products */,
+				07680E0F1F464F8600DA79D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
